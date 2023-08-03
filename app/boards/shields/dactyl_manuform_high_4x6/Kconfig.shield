@@ -1,0 +1,5 @@
+config SHIELD_DACTYL_MANUFORM_4x6_HIGH_LEFT
+    def_bool $(shields_list_contains,dactyl_manuform_4x6_high_left)
+
+config SHIELD_DACTYL_MANUFORM_4x6_HIGH_RIGHT
+    def_bool $(shields_list_contains,dactyl_manuform_4x6_high_right)

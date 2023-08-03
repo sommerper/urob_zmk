@@ -1,0 +1,8 @@
+# Copyright (c) 2021 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_MOSQUITO_LEFT
+	def_bool $(shields_list_contains,mosquito_left)
+
+config SHIELD_MOSQUITO_RIGHT
+	def_bool $(shields_list_contains,mosquito_right)
