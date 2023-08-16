@@ -6,7 +6,7 @@
 #include "../zmk-nodefree-config/keypos_def/keypos_36keys.h"
 
 #define BASE      0
-#define QURE      1
+#define COLEMAK   1
 #define LOWER     2
 #define RAISE     3
 #define EXTRAS    4
@@ -49,6 +49,7 @@ ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RT2 RT3, 0)
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
+        hold-while-undecided; \
     )
 
 // left-hand HRMs
@@ -121,7 +122,9 @@ ZMK_BEHAVIOR(alt_dot, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
     bindings = <&kp>, <&alt_morph>;
+    hold-while-undecided;
 )
+
 ZMK_BEHAVIOR(alt_morph, mod_morph,
     bindings = <&kp DOT>, <&kp COMMA>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -146,30 +149,23 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 
 
 ZMK_LAYER(base,
-  XXX           &kp W         &kp F           &kp P         &kp B                 &kp J         &kp L         &kp U         &kp Y         &kp SEMI
-  &kp A         &hml LGUI R   &hml LCTRL S    &hml LSHFT T  &kp G                 &kp M         &hmr RSHFT N  &hmr RCTRL E  &hmr RGUI I   &kp O
-  &kp Z         &kp K         &kp C           &lt NUMPAD D  &sqt_dqt              XXX           &kp H         &kp X         &kp V         &kp Q
-                              &mt LALT TAB    &lt LOWER BSPC &lt NUMPAD ESC       &kp ENTER &lt_spc RAISE 0  &alt_dot RALT 0
+  XXX           &kp C         &kp L           &kp D         &kp K                 &kp J         &kp F         &kp O         &kp U         &kp SEMI
+  &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                 &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
+  &kp Q         &kp W         &kp V           &lt NUMPAD B  &sqt_dqt              &kp COLON     &kp P         &kp X         &kp Y         &kp Z
+                              &mt LALT TAB    &lt LOWER BSPC &lt NUMBERS ESC   &kp ENTER &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
-ZMK_LAYER(qure,
-  XXX           &kp C         &kp L           &kp D         &kp B                 &kp J         &kp F         &kp O         &kp U         &kp SEMI
+ZMK_LAYER(colemak,
+  XXX           &kp C         &kp L           &kp D         &kp K                 &kp J         &kp F         &kp O         &kp U         &kp SEMI
   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                 &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
-  &kp Q         &kp W         &kp V           &lt NUMPAD K  &sqt_dqt              &kp COLON     &kp P         &kp X         &kp Y         &kp Z
+  &kp Q         &kp V         &kp W           &lt NUMPAD B  &sqt_dqt              &kp COLON     &kp P         &kp X         &kp Y         &kp Z
                               &mt LALT TAB    &lt LOWER BSPC &lt NUMPAD ESC   &kp ENTER &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
-// ZMK_LAYER(qure,
-//   XXX           &kp C         &kp L           &kp D         &kp B                 &kp J         &kp U         &kp O         &kp Y         &kp SEMI
-//   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                 &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
-//   &kp Q         &kp W         &kp F           &lt NUMPAD P  XXX                   &kp COLON     &kp V         &kp X         &kp K         &kp Z
-//                               &mt LALT TAB    &lt LOWER BSPC &lt NUMPAD ESC   &kp ENTER &lt_spc RAISE 0  &alt_dot RALT 0
-// )
-
 ZMK_LAYER(lower,
   &kp ESC       &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH         XXX           &kp HOME      &kp GRAVE     &kp END       XXX
-	XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &caps_word            XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
-  &kp LC(Z)     XXX           &copy_cut       &kp LS(INS)   &kp DEL               XXX           &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
+	&kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    &caps_word            XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
+  &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL               XXX           &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               XXX             ___           XXX                   XXX           &lt RAISE MINUS   XXX
 )
 
@@ -181,7 +177,7 @@ ZMK_LAYER(raise,
 )
 
 ZMK_LAYER(extras,
-  XXX           XXX           &to BASE        &to QURE      XXX                   &kp F13       &kp F7        &kp F8        &kp F9        &kp F10
+  XXX           XXX           &to BASE        &to COLEMAK   XXX                   &kp F13       &kp F7        &kp F8        &kp F9        &kp F10
   XXX           XXX           XXX             XXX           XXX                   &kp F14       &kp F4        &kp F5        &kp F6        &kp F11
   XXX           XXX           XXX             XXX           XXX                   &kp F15       &kp F1        &kp F2        &kp F3        &kp F12
                               ___             ___           ___                   ___           ___           ___
@@ -196,8 +192,8 @@ ZMK_LAYER(numpad,
 
 ZMK_LAYER(numbers,
   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5            &kp NUMBER_6  &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0
-  XXX           XXX           XXX             XXX           XXX                     XXX           XXX           XXX         XXX           XXX
-  XXX           XXX           XXX             XXX           XXX                     XXX           XXX           XXX         XXX           XXX
+  XXX           XXX           XXX             XXX           XXX                     XXX           &kp RA(Q)     &kp RA(P)   &kp RA(Y)     &kp RA(S)
+  XXX           XXX           XXX             XXX           XXX                     XXX           &kp RA(Z)     &kp RA(L)   &kp RA(W)     XXX
                               ___             ___           ___                     ___           ___           ___
 )
 
