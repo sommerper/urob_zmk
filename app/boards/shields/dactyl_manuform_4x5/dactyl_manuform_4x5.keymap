@@ -37,9 +37,9 @@
 #undef COMBO_TERM
 #define COMBO_TERM 40
 
-ZMK_COMBO(comboColon, &kp COLON, RB1 RB2, 0)
-ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RT1 RT2, 0)
-ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RT2 RT3, 0)
+// ZMK_COMBO(comboColon, &kp COLON, RB1 RB2, 0)
+// ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RT1 RT2, 0)
+// ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RT2 RT3, 0)
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
     ZMK_BEHAVIOR(NAME, hold_tap, \

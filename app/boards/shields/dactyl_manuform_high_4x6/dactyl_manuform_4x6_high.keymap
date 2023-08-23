@@ -175,56 +175,6 @@ ZMK_LAYER(colemak,
                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
 )
 
-// ZMK_LAYER(base,
-//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp J         &kp L         &kp U         &kp Y         &kp SEMI      &kp GRAVE
-//   XXX           &kp A         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp O         &kp SQT
-//   &caps_word    &kp Z         &kp C         &kp K           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp R         &kp X         &kp V         &kp Q         &kp COLON
-//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
-//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
-//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
-// )
-
-// ZMK_LAYER(qure,
-//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp X         &kp V         &kp K         &kp Y         &kp SEMI      &kp GRAVE
-//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
-//   &caps_word    &kp Q         &kp C         &kp L           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp J         &kp U         &kp O         &kp Z         &kp COLON
-//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
-//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
-//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
-// )
-
-
-// ZMK_LAYER(qure,
-//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp J         &kp Y         &kp U         &kp O         &kp SEMI      &kp GRAVE
-//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
-//   &caps_word    &kp Q         &kp C         &kp L           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp V         &kp X         &kp K         &kp Z         &kp COLON
-//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
-//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
-//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
-// )
-
-
-
-// ZMK_LAYER(qure,
-//   XXX           XXX           &kp L         &kp D           &kp W         &kp B                                             &kp J         &kp F         &kp U         &kp O         &kp SEMI      &kp GRAVE
-//   XXX           &kp N         &hml LGUI R   &hml LCTRL S    &hml LSHIFT T &kp G                                             &kp Y         &hmr RSHIFT H &hmr RCTRL A  &hmr RGUI E   &kp I         &kp SQT
-//   &caps_word    &kp Q         &kp X         &kp M           &lt NUMPAD C  &sqt_dqt                                          &kp COLON     &kp P         &kp X         &kp V         &kp Z         &kp COLON
-//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
-//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
-//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
-// )
-//  ldwb jfou
-// nrtsg yhaei
-// qxmc   kpvz
-// ZMK_LAYER(qure,
-//   XXX           XXX           &kp C         &kp L           &kp D         &kp B                                             &kp J         &kp U         &kp O         &kp Y         &kp SEMI      &kp GRAVE
-//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
-//   &caps_word    &kp Q         &kp W         &kp F           &lt NUMPAD P  XXX                                               &kp COLON     &kp V         &kp X         &kp K         &kp Z         &kp COLON
-//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
-//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC                  &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
-//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
-// )
-
 ZMK_LAYER(lower,
   XXX           XXX           &kp K_VOL_DN  &kp K_MUTE    &kp K_VOL_UP  XXX                                                 XXX           &kp HOME      XXX           &kp END       XXX           XXX
   XXX           &kp F2        &kp LGUI      &kp LCTRL     &kp LSHIFT    XXX                                                 XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX           XXX
@@ -280,3 +230,56 @@ ZMK_LAYER(bluetooth,
                                                                   XXX         XXX                                 XXX         XXX
 )
 
+
+
+
+
+// ZMK_LAYER(base,
+//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp J         &kp L         &kp U         &kp Y         &kp SEMI      &kp GRAVE
+//   XXX           &kp A         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp O         &kp SQT
+//   &caps_word    &kp Z         &kp C         &kp K           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp R         &kp X         &kp V         &kp Q         &kp COLON
+//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
+//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
+//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
+// )
+
+// ZMK_LAYER(qure,
+//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp X         &kp V         &kp K         &kp Y         &kp SEMI      &kp GRAVE
+//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
+//   &caps_word    &kp Q         &kp C         &kp L           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp J         &kp U         &kp O         &kp Z         &kp COLON
+//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
+//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
+//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
+// )
+
+
+// ZMK_LAYER(qure,
+//   XXX           XXX           &kp W         &kp F           &kp P         &kp B                                             &kp J         &kp Y         &kp U         &kp O         &kp SEMI      &kp GRAVE
+//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
+//   &caps_word    &kp Q         &kp C         &kp L           &lt NUMPAD D  &sqt_dqt                                          &kp COLON     &kp V         &kp X         &kp K         &kp Z         &kp COLON
+//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
+//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
+//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
+// )
+
+
+
+// ZMK_LAYER(qure,
+//   XXX           XXX           &kp L         &kp D           &kp W         &kp B                                             &kp J         &kp F         &kp U         &kp O         &kp SEMI      &kp GRAVE
+//   XXX           &kp N         &hml LGUI R   &hml LCTRL S    &hml LSHIFT T &kp G                                             &kp Y         &hmr RSHIFT H &hmr RCTRL A  &hmr RGUI E   &kp I         &kp SQT
+//   &caps_word    &kp Q         &kp X         &kp M           &lt NUMPAD C  &sqt_dqt                                          &kp COLON     &kp P         &kp X         &kp V         &kp Z         &kp COLON
+//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
+//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC            &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
+//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
+// )
+//  ldwb jfou
+// nrtsg yhaei
+// qxmc   kpvz
+// ZMK_LAYER(qure,
+//   XXX           XXX           &kp C         &kp L           &kp D         &kp B                                             &kp J         &kp U         &kp O         &kp Y         &kp SEMI      &kp GRAVE
+//   XXX           &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A         &kp SQT
+//   &caps_word    &kp Q         &kp W         &kp F           &lt NUMPAD P  XXX                                               &kp COLON     &kp V         &kp X         &kp K         &kp Z         &kp COLON
+//                               &kp TILDE     &kp SLASH                                                                                                   &kp COMMA     &kp DOT
+//                                                             &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC                  &kp RET    &lt_spc RAISE 0   &alt_dot RALT 0
+//                                                                   &kp DEL       &mo NUMBERS                                 XXX       &kp COLON
+// )

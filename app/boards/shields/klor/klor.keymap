@@ -136,7 +136,7 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
         bindings = <
                     XXX         &kp C         &kp L               &kp D         &kp K                                 &kp J               &kp F         &kp O         &kp U         &kp SEMI
           &kp ESC   &kp R       &hml LGUI S   &hml LCTRL T        &hml LSHIFT H &kp G                                 &kp M               &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A       &kp SEMI
-          &kp TAB   &kp Q       &kp W         &kp V               &lt NUMPAD B  &sqt_dqt                              &kp COLON           &kp P         &kp X         &kp Y         &kp Z       &kp ENTER
+          &kp TAB   &kp Q       &kp W         &kp V               &lt NUMPAD B  &sqt_dqt    &trans          &trans    &kp COLON           &kp P         &kp X         &kp Y         &kp Z       &kp ENTER
                     XXX         &mt LALT TAB  &lt LOWER BSPC      &lt NUMPAD ESC                      &kp ENTER   &lt_spc RAISE 0     &alt_dot RALT 0    XXX
         >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
