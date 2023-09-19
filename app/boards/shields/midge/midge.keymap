@@ -96,8 +96,8 @@ ZMK_COMBO(enter2, &kp ENTER, RH0 RH1, 0)
 // ZMK_COMBO(comboSLASH1, &kp SLASH,  RM2 RB2, 0)
 // ZMK_COMBO(comboSLASH2, &kp SLASH,  RB1 RB2, 0)
 
-ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RT1 RT2, 0)
-ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RT2 RT3, 0)
+ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RH1 RT2, 0)
+ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RH1 RT3, 0)
 
 ZMK_COMBO(comboComma, &kp COMMA,  RB0 RB1, 0)
 ZMK_COMBO(comboDot,   &kp DOT,    RB1 RB2, 0)
@@ -297,20 +297,6 @@ ZMK_BEHAVIOR(dot_comma, tap_dance,
     bindings = <&kp DOT>, <&kp COMMA>;
 )
 
-// ZMK_LAYER(default_layer,
-//   &kp Q   &kp W         &kp F         &kp P           &kp B                                             &kp J           &kp L           &kp U         &kp Y         &kp Z
-//   &kp A   &hml LGUI R   &hml LCTRL S  &hml LSHIFT T   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX O
-// 		 		  &kp K         &kp C         &lt NUM_PAD D                                                                     &kp H           &kp X     &kp V
-//  		                                                  &mt LALT TAB  &lt LOWER BSPC    &lt_spc RAISE 0  &alt_spc RALT 0
-// )
-
-// ZMK_LAYER(default_layer,
-//   &kp Q   &kp W         &kp F         &kp P           &kp B                                             &kp J           &kp L           &kp U         &kp Y         &kp Z
-//   &kp A   &hml LGUI R   &hml LCTRL S  &hml LSHIFT T   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX O
-// 		 		  &kp K         &kp C         &lt NUM_PAD D                                                                     &kp H           &kp X     &kp V
-//  		                                                  &mt LALT TAB  &lt LOWER BSPC    &lt_spc RAISE 0  &alt_spc RALT 0
-// )
-
 ZMK_LAYER(default_layer,
   &lt DANISH Q   &kp C         &kp L         &kp D           &kp K                                             &kp J           &kp F           &kp O         &kp U         &kp Z
   &lt GERMAN R   &hml LGUI S   &hml LCTRL T  &hml LSHIFT H   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX A
@@ -319,8 +305,8 @@ ZMK_LAYER(default_layer,
 )
 
 ZMK_LAYER(lower,
-	&kp ESC       &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &none     &kp HOME  &kp GRAVE &kp END   &kp LC(SLASH)
-	&kp LC(Z)     &kp LGUI      &kp LCTRL   &kp LSHIFT    &caps_word                      &none     &kp LEFT  &kp UP    &kp RIGHT &kp RET
+	&kp ESC       &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &kp SQT   &kp HOME  &kp GRAVE &kp END   XXX
+	&kp LC(Z)     &kp LGUI      &kp LCTRL   &kp LSHIFT    &caps_word                      &kp DQT   &kp LEFT  &kp UP    &kp RIGHT &kp LC(SLASH)
 	              &kp LC(LS(Z)) &copy_cut   &kp LS(INS)                                             &kp PG_UP &kp DOWN  &kp PG_DN
 				                                                &kp DEL   ___          &lt RAISE MINUS    ___
 )
@@ -345,13 +331,6 @@ ZMK_LAYER(extras,
                   &none   &none   &none                              &kp F1  &kp F2  &kp F3
                                   &trans  &trans    &trans  &trans
 )
-
-// ZMK_LAYER(extras,
-//   &kp F12  &kp F7  &kp F8  &kp F9  &kp F10                  XXX  XXX  XXX  XXX  XXX
-//   &kp F13  &kp F4  &kp F5  &kp F6  &kp F11                  XXX  XXX  XXX  XXX  XXX
-//            &kp F1  &kp F2  &kp F3                                    XXX  XXX  XXX
-//                                   &trans  &trans    &trans  &trans
-// )
 
 ZMK_LAYER(mouse,
   &none   &none   &none   &none   &none             &none    &none                &none                   &none                 &none
