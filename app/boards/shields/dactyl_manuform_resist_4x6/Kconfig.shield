@@ -1,0 +1,5 @@
+config SHIELD_DACTYL_MANUFORM_4x6_RESIST_LEFT
+    def_bool $(shields_list_contains,dactyl_manuform_4x6_resist_left)
+
+config SHIELD_DACTYL_MANUFORM_4x6_RESIST_RIGHT
+    def_bool $(shields_list_contains,dactyl_manuform_4x6_resist_right)

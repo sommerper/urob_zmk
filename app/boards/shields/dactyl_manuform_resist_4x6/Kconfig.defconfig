@@ -1,0 +1,23 @@
+if SHIELD_DACTYL_MANUFORM_4x6_RESIST_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "DMRESIST"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_DACTYL_MANUFORM_4x6_RESIST_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "DMRESIST_R"
+
+endif
+
+if SHIELD_DACTYL_MANUFORM_4x6_RESIST_LEFT || SHIELD_DACTYL_MANUFORM_4x6_RESIST_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif
