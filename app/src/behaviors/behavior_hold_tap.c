@@ -487,6 +487,7 @@ static void decide_positional_hold(struct active_hold_tap *hold_tap) {
     
     // Released key is not included in positions.
     hold_tap->status = STATUS_TAP;
+<<<<<<< HEAD
     return; // ignore flavor, set TAP
 }
 
@@ -510,6 +511,10 @@ static void release_hold_binding(struct active_hold_tap *hold_tap,
         behavior_keymap_binding_released(&binding, event);
         hold_tap->hold_released = true;
     }
+||||||| cb9c573b
+=======
+    return; // ignore flavor, set TAP
+>>>>>>> urob/main
 }
 
 static void decide_hold_tap(struct active_hold_tap *hold_tap,
