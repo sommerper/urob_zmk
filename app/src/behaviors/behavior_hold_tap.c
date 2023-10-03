@@ -59,7 +59,6 @@ struct behavior_hold_tap_config {
     int quick_tap_ms;
     int global_quick_tap_ms;
     enum flavor flavor;
-    bool hold_while_undecided;
     bool retro_tap;
     bool hold_trigger_on_release;
     int32_t hold_trigger_key_positions_len;
@@ -68,12 +67,10 @@ struct behavior_hold_tap_config {
 
 // this data is specific for each hold-tap
 struct active_hold_tap {
-    bool first_press;
     int32_t position;
     uint32_t param_hold;
     uint32_t param_tap;
     int64_t timestamp;
-    bool hold_released;
     enum status status;
     const struct behavior_hold_tap_config *config;
     struct k_work_delayable work;
@@ -226,13 +223,11 @@ static struct active_hold_tap *store_hold_tap(uint32_t position, uint32_t param_
         if (active_hold_taps[i].position != ZMK_BHV_HOLD_TAP_POSITION_NOT_USED) {
             continue;
         }
-        active_hold_taps[i].first_press = true;
         active_hold_taps[i].position = position;
         active_hold_taps[i].status = STATUS_UNDECIDED;
         active_hold_taps[i].config = config;
         active_hold_taps[i].param_hold = param_hold;
         active_hold_taps[i].param_tap = param_tap;
-        active_hold_taps[i].hold_released = false;
         active_hold_taps[i].timestamp = timestamp;
         active_hold_taps[i].position_of_first_other_key_pressed = -1;
         active_hold_taps[i].position_of_first_other_key_released = -1;
@@ -433,46 +428,46 @@ static bool is_first_other_key_released_trigger_key(struct active_hold_tap *hold
 
 
 static void decide_positional_hold(struct active_hold_tap *hold_tap) {
-
+    
     // Positional conditions is not active?
     if (!(hold_tap->config->hold_trigger_key_positions_len > 0)) {
         return; // apply flavour
     }
-
-    // Pressed key is not set?
+    
+    // Pressed key is not set? 
     if (hold_tap->position_of_first_other_key_pressed == -1) {
         return; // apply flavor
     }
-
-    // Pressed key is included in positions?
+    
+    // Pressed key is included in positions? 
     if (is_first_other_key_pressed_trigger_key(hold_tap)) {
         return; // apply flavor
     }
 
-    // Pressed key is not included in positions.
+    // Pressed key is not included in positions. 
     // We act on press?
     if (undecided_hold_tap->config->hold_trigger_on_release == false) {
         hold_tap->status = STATUS_TAP;
         return; // ignore flavor, set TAP
-    }
-
-    // We act on release.
+    } 
+    
+    // We act on release. 
     // Released key is not set?
     if (hold_tap->position_of_first_other_key_released == -1)
-    {
+    {  
         // Is current decision hold based on key pressed?
         if (hold_tap->status == STATUS_HOLD_INTERRUPT) {
-
+            
             // We can't decide yet if key which will be released:
             // - not in positions
             // - be released before timer
             // So we can't decide yet if we should overwrite decision to TAP.
             // We have to wait for key release.
-
-            hold_tap->status = STATUS_UNDECIDED;
+            
+            hold_tap->status = STATUS_UNDECIDED; 
             return; // remove flavor
         }
-
+        
         // There decision is decision:
         // - STATUS_HOLD_TIMER - tapping term reached, apply flavor
         // - STATUS_TAP - even if we set TAP later it will not change decision
@@ -483,8 +478,8 @@ static void decide_positional_hold(struct active_hold_tap *hold_tap) {
     // Released key is included in positions?
     if (is_first_other_key_released_trigger_key(hold_tap)) {
         return; // apply flavor
-    }
-
+    } 
+    
     // Released key is not included in positions.
     hold_tap->status = STATUS_TAP;
     return; // ignore flavor, set TAP
@@ -532,10 +527,6 @@ static void decide_hold_tap(struct active_hold_tap *hold_tap,
             status_str(hold_tap->status), flavor_str(hold_tap->config->flavor),
             decision_moment_str(decision_moment));
     undecided_hold_tap = NULL;
-
-    if (hold_tap->config->hold_while_undecided && !hold_tap->hold_released) {
-        release_hold_binding(hold_tap, decision_moment);
-    }
     press_binding(hold_tap);
     release_captured_events();
 }
@@ -593,12 +584,6 @@ static int on_hold_tap_binding_pressed(struct zmk_behavior_binding *binding,
 
     if (is_quick_tap(hold_tap)) {
         decide_hold_tap(hold_tap, HT_QUICK_TAP);
-    } else if (cfg->hold_while_undecided) {
-        struct zmk_behavior_binding hold_binding = {0};
-        hold_binding.behavior_dev = cfg->hold_behavior_dev;
-        hold_binding.param1 = binding->param1;
-        LOG_DBG("%d hold behavior pressed while undecided", event.position);
-        behavior_keymap_binding_pressed(&hold_binding, event);
     }
 
     // if this behavior was queued we have to adjust the timer to only
@@ -625,9 +610,6 @@ static int on_hold_tap_binding_released(struct zmk_behavior_binding *binding,
     }
 
     decide_hold_tap(hold_tap, HT_KEY_UP);
-    if (hold_tap->config->hold_while_undecided && !hold_tap->hold_released) {
-        release_hold_binding(hold_tap, HT_KEY_UP);
-    }
     decide_retro_tap(hold_tap);
     release_binding(hold_tap);
 
@@ -725,11 +707,6 @@ static int keycode_state_changed_listener(const zmk_event_t *eh) {
         return ZMK_EV_EVENT_BUBBLE;
     }
 
-    if (undecided_hold_tap->first_press && undecided_hold_tap->config->hold_while_undecided) {
-        undecided_hold_tap->first_press = false;
-        return ZMK_EV_EVENT_BUBBLE;
-    }
-
     // only key-up events will bubble through position_state_changed_listener
     // if a undecided_hold_tap is active.
     LOG_DBG("%d capturing 0x%02X %s event", undecided_hold_tap->position, ev->keycode,
@@ -785,7 +762,6 @@ static int behavior_hold_tap_init(const struct device *dev) {
                                    ? DT_INST_PROP(n, quick_tap_ms)                                 \
                                    : DT_INST_PROP(n, global_quick_tap_ms),                         \
         .flavor = DT_ENUM_IDX(DT_DRV_INST(n), flavor),                                             \
-        .hold_while_undecided = DT_INST_PROP(n, hold_while_undecided),                             \
         .retro_tap = DT_INST_PROP(n, retro_tap),                                                   \
         .hold_trigger_on_release = DT_INST_PROP(n, hold_trigger_on_release),                       \
         .hold_trigger_key_positions = DT_INST_PROP(n, hold_trigger_key_positions),                 \
