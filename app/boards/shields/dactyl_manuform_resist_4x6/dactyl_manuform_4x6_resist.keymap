@@ -157,26 +157,26 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 
 
 ZMK_LAYER(base,
-           &kp O         &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+           XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &kp ESC   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
-           &kp Q         &kp W         &kp V           &lt NUMPAD B  &sqt_dqt                                          &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                         &kp TILDE     &kp SLASH                                                                                                      &kp COMMA     &kp DOT
+           &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                         &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC        &kp RET    &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
  &mo BLUETOOTH  &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       &kp SQT
-                &kp LC(Z)     &kp LC(LS(Z))   &copy_cut     &kp LS(INS)   XXX                                               XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
+                &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   XXX                                               XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               XXX           XXX                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
 )
 
 ZMK_LAYER(raise,
-           &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
+           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
  XXX       &kp DOT       &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp BACKSLASH &kp TILDE     &kp SEMI      &kp COLON     &kp DQT                                             &kp SQT       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
-                         ___           ___                                                                                                         ___           ___
+           &kp BACKSLASH &kp TILDE     &kp SEMI      &kp COLON     &kp EXCL                                            &kp SQT       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
+                         ___           &kp SQT                                                                                                     ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )
 
