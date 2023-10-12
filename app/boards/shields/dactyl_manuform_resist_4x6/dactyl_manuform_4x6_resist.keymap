@@ -166,23 +166,23 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
- &mo BLUETOOTH  &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       &kp SQT
-                &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   XXX                                               XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
-                              XXX           XXX                                                                                                            ___           ___
+ &caps_word     &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       &kp SQT
+                &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
+                              ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
 )
 
 ZMK_LAYER(raise,
-           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
+           &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
  XXX       &kp DOT       &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp BACKSLASH &kp TILDE     &kp SEMI      &kp COLON     &kp EXCL                                            &kp SQT       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
-                         ___           &kp SQT                                                                                                     ___           ___
+           &kp BACKSLASH &kp TILDE     &kp SEMI      &kp COLON     XXX                                                 &kp SQT       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
+                         ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )
 
 ZMK_LAYER(extras,
                 XXX           XXX           XXX           XXX           XXX                                             &kp F13       &kp F7        &kp F8        &kp F9        &kp F10
-  XXX           XXX           XXX           XXX           XXX           XXX                                             &kp F14       &kp F4        &kp F5        &kp F6        &kp F11       XXX
+  &mo BLUETOOTH XXX           XXX           XXX           XXX           XXX                                             &kp F14       &kp F4        &kp F5        &kp F6        &kp F11       XXX
                 XXX           XXX           XXX           XXX           XXX                                             &kp F15       &kp F1        &kp F2        &kp F3        &kp F12
                               ___           ___                                                                                                     ___           ___
                                                             ___         XXX         ___                     ___         XXX         ___
