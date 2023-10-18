@@ -54,6 +54,8 @@ ZMK_COMBO(combo6, &kp DQT, LB0 LB1, 0)
         hold-trigger-on-release; \
         hold-while-undecided; \
     )
+
+
 //global-quick-tap-ms = <150>;
 
 // left-hand HRMs
@@ -156,12 +158,20 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 
 
 
+// ZMK_LAYER(base,
+//            XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+//  &kp ESC   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
+//            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+//                          &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
+//                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD DEL      &lt LANG MINUS      &lt_spc RAISE 0  &alt_dot RALT 0
+// )
+
 ZMK_LAYER(base,
-           XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
- &kp ESC   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
-           &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                         &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
-                                                       &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC        &lt LANG RET    &lt_spc RAISE 0  &alt_dot RALT 0
+            XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+ &caps_word &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &key_repeat
+            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                          &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
+                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC          &lt LANG RET  &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
 ZMK_LAYER(lower,
@@ -189,17 +199,17 @@ ZMK_LAYER(extras,
 )
 
 ZMK_LAYER(numpad,
-                XXX           XXX           XXX           XXX           XXX                                             &kp KP_DIVIDE   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
-  XXX           XXX           XXX           XXX           XXX           XXX                                             &kp KP_MULTIPLY &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS       XXX
-                XXX           &kp CAPSLOCK  &kp KP_NUMLOCK XXX          XXX                                             XXX             &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_EQUAL
-                              ___           ___                                                                                                     &kp KP_N0   &kp KP_COMMA
+                XXX           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  XXX                                             &kp KP_DIVIDE   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
+  XXX           XXX           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  XXX                                             &kp KP_MULTIPLY &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS       XXX
+                &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  XXX                                             XXX             &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_EQUAL
+                              &kp CAPSLOCK  &kp KP_NUMLOCK                                                                                          &kp COMMA   &kp KP_DOT
                                                             ___         ___         ___                     ___         &kp KP_N0     &kp KP_DOT
 )
 
 ZMK_LAYER(numbers,
                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0
-  XXX           XXX           &kp LGUI      &kp LCTRL     &kp LSHIFT    XXX                                             XXX             &kp RA(Q)     &kp RA(P)   &kp RA(Y)     &kp RA(S)     XXX
-                XXX           XXX           XXX           XXX           XXX                                             XXX             &kp RA(Z)     &kp RA(L)   &kp RA(W)     XXX
+  XXX           XXX           &kp LGUI      &kp LCTRL     &kp LSHIFT    XXX                                             XXX             XXX           XXX         XXX           XXX           XXX
+                XXX           XXX           XXX           XXX           XXX                                             XXX             XXX           XXX         XXX           XXX
                               ___           ___                                                                                                       XXX         XXX
                                                             ___         XXX         ___                     ___         XXX           XXX
 )
