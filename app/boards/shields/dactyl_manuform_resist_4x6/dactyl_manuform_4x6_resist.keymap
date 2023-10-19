@@ -104,6 +104,19 @@ MAKE_HRM(hmr, &kp, &kp, THUMBS_L THUMBS_R KEYS_L)
 MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
+// grave on shift single qoute
+/ {
+  behaviors {
+    gsqt: grave_escape {
+      compatible = "zmk,behavior-mod-morph";
+      label = "GRAVE_ESCAPE";
+      #binding-cells = <0>;
+      bindings = <&kp SQT>, <&kp GRAVE>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
+  };
+};
+
 // modify &sk to prevent double capital letters
 / {
   behaviors {
@@ -183,14 +196,14 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 ZMK_LAYER(base,
             XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &caps_word &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &key_repeat
-            &kp Q         &kp W         &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                          &kp SQT       &kp DQT                                                                                                        &kp COMMA     &kp DOT
+            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                          &gsqt         &kp DQT                                                                                                        &kp COMMA     &kp DOT
                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC          &lt LANG RET  &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
- &caps_word     &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       &kp SQT
+ XXX            &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       XXX
                 &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
