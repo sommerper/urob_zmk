@@ -104,6 +104,20 @@ MAKE_HRM(hmr, &kp, &kp, THUMBS_L THUMBS_R KEYS_L)
 MASK_MODS(masked_home, (MOD_LCTL), &kp HOME)
 MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
 
+// modify &sk to prevent double capital letters
+/ {
+  behaviors {
+    skq: sticky_key_quick_release {
+      compatible = "zmk,behavior-sticky-key";
+      label = "STICKY_KEY_QUICK_RELEASE";
+      #binding-cells = <1>;
+      bindings = <&kp>;
+      release-after-ms = <5000>;
+      quick-release;
+    };
+  };
+};
+
 // ----------------------------
 ZMK_BEHAVIOR(lt_spc, hold_tap,
     flavor = "balanced";
@@ -118,7 +132,7 @@ ZMK_BEHAVIOR(spc_morph, mod_morph,
 ZMK_BEHAVIOR(dot_spc, macro,
     wait-ms = <0>;
     tap-ms = <5>;
-    bindings = <&kp DOT &kp SPACE &sk LSHFT>;
+    bindings = <&kp DOT &kp SPACE &skq LSHFT>;
 )
 
 // ZMK_BEHAVIOR(tmux, macro,
@@ -169,8 +183,8 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 ZMK_LAYER(base,
             XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &caps_word &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &key_repeat
-            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                          &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
+            &kp Q         &kp W         &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                          &kp SQT       &kp DQT                                                                                                        &kp COMMA     &kp DOT
                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC          &lt LANG RET  &lt_spc RAISE 0  &alt_dot RALT 0
 )
 

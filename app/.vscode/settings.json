@@ -1,5 +1,6 @@
 {
   "files.associations": {
-    "keys.h": "c"
+    "keys.h": "c",
+    "*.keymap": "cpp"
   }
 }
