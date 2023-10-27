@@ -129,6 +129,14 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
       quick-release;
     };
   };
+  hltr: hold_layer_tap_repeat {
+    label = "HOLD_LAYER_TAP_REPEAT";
+    #binding-cells = <2>;
+    compatible = "zmk,behavior-hold-tap";
+    bindings = <&mo>, <&key_repeat>;
+    tapping-term-ms = <120>;
+    flavor = "tap-preferred";
+  };
 };
 
 // ----------------------------
@@ -195,10 +203,10 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 
 ZMK_LAYER(base,
             XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
- &caps_word &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &key_repeat
+ &caps_word &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
             &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &gsqt         &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC          &lt LANG RET  &lt_spc RAISE 0  &alt_dot RALT 0
+                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC          &hltr LANG &key_repeat  &lt_spc RAISE 0  &alt_dot RALT 0
 )
 
 ZMK_LAYER(lower,
