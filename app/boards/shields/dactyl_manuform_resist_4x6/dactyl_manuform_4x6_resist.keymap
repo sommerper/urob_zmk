@@ -218,12 +218,20 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 // )
 
 ZMK_LAYER(base,
-            &kp GRAVE     &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+            &kp R         &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &kp SQT    &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
-            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+            &kp Q         &kp W         &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp UNDERSCORE &kp MINUS                                                                                                     &kp COMMA     &kp DOT
                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
 )
+
+// ZMK_LAYER(base,
+//             &kp GRAVE     &kp J         &kp L           &kp D         &kp K                                             &kp C            &kp F         &kp O         &kp U         &kp SEMI
+//  &kp SQT    &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
+//             &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+//                           &kp UNDERSCORE &kp MINUS                                                                                                     &kp COMMA     &kp DOT
+//                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+// )
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
