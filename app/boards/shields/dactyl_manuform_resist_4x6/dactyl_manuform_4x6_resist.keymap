@@ -218,11 +218,11 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 // )
 
 ZMK_LAYER(base,
-            &kp R         &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
- &kp SQT    &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
-            &kp Q         &kp W         &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                          &kp UNDERSCORE &kp MINUS                                                                                                     &kp COMMA     &kp DOT
-                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+            &kp GRAVE     &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+ &kp SQT    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
+            &kp Q         &kp W          &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                          &kp UNDERSCORE &kp MINUS                                                                                                      &kp COMMA     &kp DOT
+                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
 )
 
 // ZMK_LAYER(base,
@@ -243,7 +243,7 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp DOT       &kp LT        &kp SLASH     &kp GT        XXX                                                 &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      &kp QMARK
+ XXX       &kp DOT       &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
            &kp BACKSLASH &kp TILDE     XXX           XXX           XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
