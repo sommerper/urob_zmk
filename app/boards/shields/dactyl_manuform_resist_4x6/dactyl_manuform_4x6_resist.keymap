@@ -192,31 +192,6 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 // ----------------------------
 
 
-
-// ZMK_LAYER(base,
-//            XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
-//  &kp ESC   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
-//            &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-//                          &kp GRAVE     &kp SQT                                                                                                        &kp COMMA     &kp DOT
-//                                                        &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD DEL      &lt LANG MINUS      &lt_spc RAISE 0  &alt_dot RALT 0
-// )
-
-// ZMK_LAYER(base,
-//             XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
-//  &kp ESC    &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RET
-//             &kp Q         &kp W         &kp V           &lt NUMPAD B  &caps_word                                        &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-//                           &gsqt         &kp DQT                                                                                                        &kp COMMA     &kp DOT
-//                                                         &mt LALT TAB  &lt LOWER BSPC  &hltr NUMPAD &key_repeat   &hltr LANG &key_repeat  &lt_spc RAISE 0  &alt_dot RALT 0
-// )
-
-// ZMK_LAYER(base,
-//             XXX           &kp C         &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
-//  &gsqt      &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
-//             &kp Q         &kp W         &kp V           &lt NUMPAD B  &gsqt                                             &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-//                           &kp GRAVE     &kp DQT                                                                                                        &kp COMMA     &kp DOT
-//                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
-// )
-
 ZMK_LAYER(base,
             &kp GRAVE     &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &kp SQT    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
@@ -224,14 +199,6 @@ ZMK_LAYER(base,
                           &kp UNDERSCORE &kp MINUS                                                                                                      &kp COMMA     &kp DOT
                                                          &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
 )
-
-// ZMK_LAYER(base,
-//             &kp GRAVE     &kp J         &kp L           &kp D         &kp K                                             &kp C            &kp F         &kp O         &kp U         &kp SEMI
-//  &kp SQT    &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
-//             &kp Q         &kp W         &kp V           &lt NUMPAD B  XXX                                               &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-//                           &kp UNDERSCORE &kp MINUS                                                                                                     &kp COMMA     &kp DOT
-//                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
-// )
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
@@ -243,8 +210,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp DOT       &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp BACKSLASH &kp TILDE     XXX           XXX           XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
+ XXX       XXX           &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
+           &kp BACKSLASH &kp TILDE     XXX           &kp DOT       XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )
