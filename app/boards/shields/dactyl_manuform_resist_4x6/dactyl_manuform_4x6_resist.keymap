@@ -193,7 +193,7 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 
 
 ZMK_LAYER(base,
-            XXX           &kp C          &kp D           &kp L         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+            XXX           &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &caps_word &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp SQT        &kp DQT                                                                                                        &kp COMMA     &kp DOT
@@ -210,8 +210,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp LT        &kp MINUS     &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp BACKSLASH &kp TILDE     XXX           &kp DOT       XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
+ XXX       XXX           &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
+           &kp BACKSLASH &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )
