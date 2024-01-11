@@ -82,8 +82,9 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 #undef COMBO_TERM
 #define COMBO_TERM 40
 
-ZMK_COMBO(enter1, &kp ENTER,  RH0 RM4, 0)
+ZMK_COMBO(enter1, &kp ENTER, RH0 RM4, 0)
 ZMK_COMBO(enter2, &kp ENTER, RH0 RH1, 0)
+ZMK_COMBO(enter2, &kp ENTER, RB2 RM4, 0)
 // ZMK_COMBO(comboZ1,     &kp Z,      LM2 LB2, 0)
 // ZMK_COMBO(comboZ2,     &kp Z,      LB1 LB2, 0)
 
@@ -96,8 +97,8 @@ ZMK_COMBO(enter2, &kp ENTER, RH0 RH1, 0)
 // ZMK_COMBO(comboSLASH1, &kp SLASH,  RM2 RB2, 0)
 // ZMK_COMBO(comboSLASH2, &kp SLASH,  RB1 RB2, 0)
 
-ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RH1 RT2, 0)
-ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  RH1 RT3, 0)
+ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RH0 RT1, 0)
+ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES, RH0 RT2, 0)
 
 ZMK_COMBO(comboComma, &kp COMMA,  RB0 RB1, 0)
 ZMK_COMBO(comboDot,   &kp DOT,    RB1 RB2, 0)
@@ -109,7 +110,6 @@ ZMK_COMBO(comboResetRight, &sys_reset,  RT0 RT4, 0)
 
 ZMK_COMBO(comboBootLeft, &bootloader,  LM0 LM4, 0)
 ZMK_COMBO(comboBootRight, &bootloader,  RM0 RM4, 0)
-
 
 
 // ZMK_COMBO(comboSlash1, &kp SLASH,  RB0 RM4, 0)
@@ -300,7 +300,7 @@ ZMK_BEHAVIOR(dot_comma, tap_dance,
 ZMK_LAYER(default_layer,
   &lt DANISH Q   &kp C         &kp L         &kp D           &kp K                                             &kp J           &kp F           &kp O         &kp U         &kp Z
   &lt GERMAN R   &hml LGUI S   &hml LCTRL T  &hml LSHIFT H   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX A
-		 		  &kp W         &kp V         &lt NUM_PAD B                                                                     &kp P           &kp X     &kp Y
+		 		         &kp W         &kp V         &lt NUM_PAD B                                                                     &kp P           &kp X     &kp Y
  		                                                  &mt LALT TAB  &lt LOWER BSPC    &lt_spc RAISE 0  &alt_spc RALT 0
 )
 
@@ -312,11 +312,12 @@ ZMK_LAYER(lower,
 )
 
 ZMK_LAYER(raise,
-  &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp ASTERISK
-  &kp DOT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp PIPE    &kp PLUS        &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
-            &kp TILDE &kp SEMI  &kp COLON                                                         &kp MINUS       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+  &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp SEMI
+  &kp SQT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp PIPE    &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
+            &kp TILDE &kp MINUS &kp DOT                                                           &kp COLON       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
                                             &kp BACKSLASH &lt LOWER UNDERSCORE        ___      &kp EQUAL
 )
+
 
 ZMK_LAYER(num_pad,
   &none   &none         &none           &none   &none                         &kp KP_DIVIDE   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
@@ -324,6 +325,8 @@ ZMK_LAYER(num_pad,
           &kp CAPSLOCK  &kp KP_NUMLOCK  &trans                                                &kp KP_N1   &kp KP_N2   &kp KP_N3
                                                 &trans  &trans    &kp KP_N0   &dot_comma
 )
+
+
 
 ZMK_LAYER(extras,
   &none   &none   &none   &none   &none                     &kp F12  &kp F7  &kp F8  &kp F9  &kp F10
