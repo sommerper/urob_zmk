@@ -195,9 +195,9 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
 ZMK_LAYER(base,
             XXX           &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &caps_word &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
-            &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp GRAVE                                         &kp COLON        &kp P         &kp X         &kp Y         &kp Z
-                          &kp SQT        &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMPAD ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+            &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+                          &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
+                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
 )
 
 ZMK_LAYER(lower,
@@ -232,12 +232,20 @@ ZMK_LAYER(numpad,
                                                             ___         ___         ___                     ___         &kp KP_N0     &kp KP_DOT
 )
 
+// ZMK_LAYER(numbers,
+//                 &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0
+//   XXX           XXX           &kp LGUI      &kp LCTRL     &kp LSHIFT    XXX                                             XXX             XXX           XXX         XXX           XXX           XXX
+//                 XXX           XXX           XXX           XXX           XXX                                             XXX             XXX           XXX         XXX           XXX
+//                               ___           ___                                                                                                       XXX         XXX
+//                                                             ___         XXX         ___                     ___         XXX           XXX
+// )
+
 ZMK_LAYER(numbers,
-                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0
-  XXX           XXX           &kp LGUI      &kp LCTRL     &kp LSHIFT    XXX                                             XXX             XXX           XXX         XXX           XXX           XXX
-                XXX           XXX           XXX           XXX           XXX                                             XXX             XXX           XXX         XXX           XXX
-                              ___           ___                                                                                                       XXX         XXX
-                                                            ___         XXX         ___                     ___         XXX           XXX
+                &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                          &kp F6          &kp F7        &kp KP_N8   &kp F9        &kp F10
+  XXX           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0    XXX
+                &kp F11       &kp F12       &kp F13       &kp F14       &kp F15                                         &kp F16         &kp F17       &kp KP_N8   &kp F19       &kp F20
+                              ___           ___                                                                                                       ___         ___
+                                                            ___         ___         ___                     ___         ___           ___
 )
 
 ZMK_LAYER(bluetooth,
