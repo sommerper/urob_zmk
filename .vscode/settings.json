@@ -20,5 +20,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "C_Cpp.default.compilerPath": "/home/persommer/zephyr-sdk-0.16.3/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc",
-  "cmake.configureOnOpen": false
+  "cmake.configureOnOpen": false,
+  "git.ignoreLimitWarning": true
 }
