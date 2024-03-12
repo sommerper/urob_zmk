@@ -209,10 +209,10 @@ ZMK_LAYER(base,
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
                                                          &mt LALT TAB  &hthp LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &hthp RAISE SPC &alt_dot RALT 0
 )
-  
+
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
- &caps_word     &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       XXX
+ &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       XXX
                 &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
