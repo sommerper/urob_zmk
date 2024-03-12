@@ -48,7 +48,7 @@ ZMK_COMBO(combo6, &kp DQT, LB0 LB1, 0)
     ZMK_BEHAVIOR(NAME, hold_tap, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
-        quick-tap-ms = <175>; \
+        quick-tap-ms = <280>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
@@ -65,13 +65,13 @@ MAKE_HRM(hmr, &kp, &kp, THUMBS_L THUMBS_R KEYS_L)
 
 &lt {
   tapping-term-ms = <280>;
-  quick-tap-ms = <175>; // repeat on tap-into-hold
+  quick-tap-ms = <280>; // repeat on tap-into-hold
   flavor = "balanced";
 };
 
 &mt {
   tapping-term-ms = <280>;
-  quick-tap-ms = <200>; // repeat on tap-into-hold
+  quick-tap-ms = <280>; // repeat on tap-into-hold
   flavor = "balanced";
 };
 
@@ -137,6 +137,16 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
     tapping-term-ms = <120>;
     flavor = "tap-preferred";
   };
+  // &hthp NUMPAD B --- doesn't work?
+  hthp: holdtap_holdpreferred {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOLD_TAP_TAP_PREFERRED";
+      #binding-cells = <2>;
+      flavor = "hold-preferred";
+      tapping-term-ms = <200>;
+      quick-tap-ms = <0>;
+      bindings = <&mo>, <&kp>;
+  };
 };
 
 // ----------------------------
@@ -197,12 +207,12 @@ ZMK_LAYER(base,
  &caps_word &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &dot_spc
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+                                                         &mt LALT TAB  &hthp LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &hthp RAISE SPC &alt_dot RALT 0
 )
-
+  
 ZMK_LAYER(lower,
-                XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  XXX                                               XXX              &kp HOME      XXX           &kp END       XXX
- &caps_word     &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    XXX                                               XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       XXX
+                XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
+ &caps_word     &kp F2        &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX       XXX
                 &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
@@ -210,8 +220,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp PIPE      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp XXX       XXX           &kp LBKT      &kp RBKT      &kp EQUAL
+ XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp SPC       &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
+           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp XXX       &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )

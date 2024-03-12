@@ -1,6 +1,11 @@
 {
   "files.associations": {
     "keys.h": "c",
-    "*.keymap": "cpp"
+    "*.keymap": "cpp",
+    "bitset": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory": "cpp",
+    "random": "cpp"
   }
 }
