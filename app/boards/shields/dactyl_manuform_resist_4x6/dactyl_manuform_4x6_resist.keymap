@@ -142,7 +142,8 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
       compatible = "zmk,behavior-hold-tap";
       label = "HOLD_TAP_TAP_PREFERRED";
       #binding-cells = <2>;
-      flavor = "hold-preferred";
+      // flavor = "hold-preferred";
+      flavor = "balanced";
       tapping-term-ms = <200>;
       quick-tap-ms = <0>;
       bindings = <&mo>, <&kp>;
