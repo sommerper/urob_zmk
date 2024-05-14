@@ -82,6 +82,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)
 #undef COMBO_TERM
 #define COMBO_TERM 40
 
+
 ZMK_COMBO(enter1, &kp ENTER, RH0 RM4, 0)
 ZMK_COMBO(enter2, &kp ENTER, RH0 RH1, 0)
 ZMK_COMBO(enter2, &kp ENTER, RB2 RM4, 0)
@@ -111,6 +112,9 @@ ZMK_COMBO(comboResetRight, &sys_reset,  RT0 RT4, 0)
 ZMK_COMBO(comboBootLeft, &bootloader,  LM0 LM4, 0)
 ZMK_COMBO(comboBootRight, &bootloader,  RM0 RM4, 0)
 
+// ZMK_COMBO(resetLeft, &bootloader, LT0 LT4, 0)
+// ZMK_COMBO(resetRight, &bootloader, RT0 RT4, 0)
+// ZMK_COMBO(resetRight, &bootloader, RT0 RT4, 0)
 
 // ZMK_COMBO(comboSlash1, &kp SLASH,  RB0 RM4, 0)
 // ZMK_COMBO(comboSlash2, &kp SLASH, RB2 RM4, 0)
@@ -313,8 +317,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
   &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp SEMI
-  &kp SQT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp PIPE    &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
-            &kp TILDE &kp MINUS &kp DOT                                                           &kp COLON       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+  &kp SQT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp COLON   &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
+            &kp TILDE &kp MINUS &kp DOT                                                           &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
                                             &kp BACKSLASH &lt LOWER UNDERSCORE        ___      &kp EQUAL
 )
 
