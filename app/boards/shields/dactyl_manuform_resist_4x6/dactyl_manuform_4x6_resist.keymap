@@ -200,16 +200,50 @@ ZMK_BEHAVIOR(sqt_dqt, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&kp SQT>, <&kp DQT>;
 )
+
+
+
+// ----------------------------
+ZMK_BEHAVIOR(qu, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp Q>, <&qu_macro>, <&qi_macro>;
+)
+ZMK_BEHAVIOR(qu_macro, macro,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&kp Q &kp U>;
+)
+ZMK_BEHAVIOR(qi_macro, macro,
+    wait-ms = <0>;
+    tap-ms = <5>;
+    bindings = <&kp Q &kp I>;
+)
 // ----------------------------
 
 
+// ZMK_LAYER(base,
+//             &kp F11       &kp W          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+//  &kp LC(BSPC) &kp R       &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &caps_word
+//             &kp Q         &kp C          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+//                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
+//                                                          &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+// )
+
 ZMK_LAYER(base,
-            &kp F11       &kp W          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+            &kp F11       &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
  &kp LC(BSPC) &kp R       &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &caps_word
-            &kp Q         &kp C          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+            &kp Z         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &qu
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
                                                          &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
 )
+
+// ZMK_LAYER(base,
+//             &kp F11       &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
+//  &kp LC(BSPC) &kp P       &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &caps_word
+//             &kp Q         &kp W          &kp V           &lt NUMPAD R  &kp SQT                                           &kp COLON        &kp B         &kp X         &kp Y         &kp Z
+//                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
+//                                                          &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC         &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+// )
 
 ZMK_LAYER(lower,
                 XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
