@@ -38,10 +38,22 @@
 #define ___ &trans
 
 #undef COMBO_TERM
-#define COMBO_TERM 40
+#define COMBO_TERM 18
 
 
-ZMK_COMBO(combo6, &kp DQT, LB0 LB1, 0)
+
+
+ZMK_COMBO(comboDoubleQuote1, &kp SQT, RM1 RM2, BASE)
+
+// #define HRC_TAB    &hml         LS(LALT) TAB
+// ZMK_COMBO(tab,   HRC_TAB,       LT3 LT1,     BASE, COMBO_TERM)
+
+// ZMK_COMBO(combo_the, &macro_the, LT3 LT1, 0)
+// ZMK_BEHAVIOR(macro_the, macro,
+//     wait-ms = <0>;
+//     tap-ms = <5>;
+//     bindings = <&kp T &kp H &kp E &kp SPACE>;
+// )
 
 
 #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
@@ -223,6 +235,10 @@ ZMK_BEHAVIOR(sch_macro, macro,
     tap-ms = <5>;
     bindings = <&kp S>, <&kp C>, <&kp H>;
 )
+
+
+
+
 // ----------------------------
 
 
