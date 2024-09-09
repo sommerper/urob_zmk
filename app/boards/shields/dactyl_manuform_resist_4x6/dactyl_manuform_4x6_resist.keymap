@@ -308,7 +308,7 @@ ZMK_BEHAVIOR(sch_macro, macro,
 
 ZMK_LAYER(base,
             XXX           &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp SEMI
- &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RETURN
+ &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A             &kp RETURN
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
                                                          &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC       &lt LANG RET   &lt RAISE SPC &alt_dot RALT 0
@@ -316,7 +316,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(lower,
                 &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
- &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN       XXX
+ &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX            XXX
                 &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
@@ -324,8 +324,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &dot_spc      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp XXX       &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
+ XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
+           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 XXX           &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
 )
@@ -348,7 +348,7 @@ ZMK_LAYER(basemac,
 
 
 ZMK_LAYER(lowermac,
-                &tog BASE     &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
+                &tog BASE     &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
  &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN       XXX
                 &kp LG(Z)     &kp LG(LS(Z)) &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
                               ___           ___                                                                                                            ___           ___

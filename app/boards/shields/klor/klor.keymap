@@ -112,6 +112,11 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
 )
 
+ZMK_BEHAVIOR(copy_cut_mac, tap_dance,
+    tapping-term-ms = <200>;
+    bindings = <&kp LG(INS)>, <&kp LC(X)>;
+)
+
 ZMK_BEHAVIOR(dot_comma, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&kp DOT>, <&kp COMMA>;
@@ -161,7 +166,7 @@ ZMK_BEHAVIOR(sch_macro, macro,
                     XXX         &kp C         &kp L               &kp D           &kp K                                       &kp J               &kp F             &kp O             &kp U         &kp SEMI
           &kp ESC   &kp R       &hml LGUI S   &hml LCTRL T        &hml LSHIFT H   &kp G                                       &kp M               &hmr RSHIFT N     &hmr RCTRL E      &hmr RGUI I   &kp A       XXX
           XXX       &kp Q       &kp W         &kp V               &lt NUMPAD B    &sqt_dqt        XXX             XXX         &kp COLON           &kp P             &kp X             &kp Y         &kp Z       &kp ENTER
-                                XXX           &mt LALT TAB        &lt LOWER BSPC  &lt NUMBERS ESC                             &lt LANG RET        &lt_spc RAISE 0   &alt_dot RALT 0   XXX
+                                XXX           &mt LALT TAB        &lt LOWER BSPC  &lt NUMBERS ESC                             &lt LANG RET        &lt_spc RAISE 0   &alt_dot RALT 0   &kp COMMA
         >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -195,10 +200,10 @@ ZMK_BEHAVIOR(sch_macro, macro,
       base_layer_mac {
         label= "BASEMAC";
         bindings = <
-                    XXX         &kp C         &kp L               &kp D           &kp K                                       &kp J               &kp F             &kp O             &kp U         &kp SEMI
-          &kp ESC   &kp R       &hml LGUI S   &hml LCTRL T        &hml LSHIFT H   &kp G                                       &kp M               &hmr RSHIFT N     &hmr RCTRL E      &hmr RGUI I   &kp A       &kp SEMI
-          &kp TAB   &kp Q       &kp W         &kp V               &lt NUMPAD B    &sqt_dqt        XXX             XXX         &kp COLON           &kp P             &kp X             &kp Y         &kp Z       &kp ENTER
-                                XXX           &mt LALT TAB        &lt LOWER BSPC  &lt NUMPAD ESC                              &kp ENTER           &lt_spc RAISE 0   &alt_dot RALT 0   XXX
+                    XXX         &kp C         &kp L               &kp D             &kp K                                       &kp J               &kp F               &kp O             &kp U         &kp SEMI
+          &kp ESC   &kp R       &hml LGUI S   &hml LCTRL T        &hml LSHIFT H     &kp G                                       &kp M               &hmr RSHIFT N       &hmr RCTRL E      &hmr RGUI I   &kp A       XXX
+          &kp TAB   &kp Q       &kp W         &kp V               &lt NUMPAD B      &sqt_dqt        XXX             XXX         &kp COLON           &kp P               &kp X             &kp Y         &kp Z       &kp ENTER
+                                XXX           &mt LALT TAB        &lt LOWERMAC BSPC &lt NUMPAD ESC                              &kp ENTER           &lt_spc RAISEMAC 0  &alt_dot RALT 0   &kp COMMA
         >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -210,7 +215,7 @@ ZMK_BEHAVIOR(sch_macro, macro,
         bindings = <
                     &tog BASE     &kp K_VOL_DN  &kp K_MUTE          &kp K_VOL_UP  &kp LG(BSPC)                            &kp HOME            &kp LG(LEFT)      XXX               &kp LG(RIGHT) &kp END
           XXX       XXX           &kp LGUI      &kp LCTRL           &kp LSHIFT    &kp BSPC                                XXX                 &kp LEFT          &kp UP            &kp RIGHT     XXX             XXX
-          XXX       &kp LG(Z)     &kp LG(LS(Z)) &copy_cut           &kp LG(V)     &kp DEL     XXX             XXX         XXX                 &kp PG_UP         &kp DOWN          &kp PG_DN     &kp LC(SLASH)   XXX
+          XXX       &kp LG(Z)     &kp LG(LS(Z)) &copy_cut_mac       &kp LG(V)     &kp DEL     XXX             XXX         XXX                 &kp PG_UP         &kp DOWN          &kp PG_DN     &kp LC(SLASH)   XXX
                                   XXX           XXX                 XXX           XXX                                     XXX                 &kp MINUS         XXX               XXX
         >;
         // sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
