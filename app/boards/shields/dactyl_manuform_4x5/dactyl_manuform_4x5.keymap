@@ -190,14 +190,14 @@ ZMK_LAYER(lower,
   &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)          XXX           &kp HOME      &kp GRAVE     &kp END       XXX
 	&caps_word    &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC              XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
   &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL               XXX           &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
-                              XXX             ___           XXX                   XXX           &lt RAISE MINUS   XXX
+                              ___             ___           ___                   ___           &kp MINUS     ___
 )
 
 ZMK_LAYER(raise,
   XXX           &kp AT        &kp HASH        &kp DOLLAR    &kp PERCENT           &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp ASTERISK
   &kp BACKSLASH &kp LT        &kp SLASH       &kp GT        &kp QMARK             &kp GRAVE     &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS
   &kp EXCL      &kp TILDE     &kp MINUS       &kp DOT       XXX                   &kp DQT       &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
-                              XXX     &lt LOWER UNDERSCORE  XXX                   XXX           ___           XXX
+                              ___           &kp UNDERSCORE  ___                   ___           ___           ___
 )
 // -------------------------------------------------------------------
 // Linux end
@@ -218,7 +218,7 @@ ZMK_LAYER(lowermac,
   &kp ESC       &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)          XXX           &kp HOME      &kp GRAVE     &kp END       XXX
 	&caps_word    &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC              XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
   &kp LG(Z)     &kp LG(LS(Z)) &copy_cut_mac   &kp LG(V)     &kp DEL               XXX           &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
-                              XXX             ___           XXX                   XXX           &kp MINUS     XXX
+                              ___             ___           XXX                   XXX           &kp MINUS     XXX
 )
 
 ZMK_LAYER(raisemac,
