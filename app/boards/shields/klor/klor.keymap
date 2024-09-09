@@ -114,7 +114,7 @@ ZMK_BEHAVIOR(copy_cut, tap_dance,
 
 ZMK_BEHAVIOR(copy_cut_mac, tap_dance,
     tapping-term-ms = <200>;
-    bindings = <&kp LG(INS)>, <&kp LC(X)>;
+    bindings = <&kp LG(V)>, <&kp LG(X)>;
 )
 
 ZMK_BEHAVIOR(dot_comma, tap_dance,
