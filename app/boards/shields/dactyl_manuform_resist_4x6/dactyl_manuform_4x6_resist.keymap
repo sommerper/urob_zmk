@@ -36,6 +36,10 @@
             if-layers = <LOWER RAISE>;
             then-layer = <EXTRAS>;
         };
+        tri_layer {
+            if-layers = <LOWERMAC RAISEMAC>;
+            then-layer = <EXTRAS>;
+        };
     };
 };
 
