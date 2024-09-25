@@ -1,0 +1,23 @@
+if SHIELD_DACTYL_MANUFORM_5x6_COSMOS_NEW_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "DMRCOSMOSNEW"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_DACTYL_MANUFORM_5x6_COSMOS_NEW_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "DMCOSMOSNEW_R"
+
+endif
+
+if SHIELD_DACTYL_MANUFORM_5x6_COSMOS_NEW_LEFT || SHIELD_DACTYL_MANUFORM_5x6_COSMOS_NEW_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif
