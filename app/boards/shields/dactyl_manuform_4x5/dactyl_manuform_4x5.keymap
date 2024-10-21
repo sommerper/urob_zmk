@@ -192,7 +192,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(lower,
   &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)          XXX           &kp HOME      &kp GRAVE     &kp END       XXX
-	&caps_word    &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC              XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
+  &caps_word    &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC              XXX           &kp LEFT      &kp UP        &kp RIGHT     XXX
   &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL               XXX           &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___             ___           ___                   ___           &lt RAISE MINUS     ___
 )
