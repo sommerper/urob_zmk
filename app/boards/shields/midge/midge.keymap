@@ -107,8 +107,9 @@ ZMK_COMBO(enter3, &kp ENTER, RB2 RM4, BASE BASEMAC)
 // ZMK_COMBO(comboSLASH1, &kp SLASH,  RM2 RB2, 0)
 // ZMK_COMBO(comboSLASH2, &kp SLASH,  RB1 RB2, 0)
 
-ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RH0 RT1, BASE BASEMAC)
-ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES, RH0 RT2, BASE BASEMAC)
+ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE, RH0 RB0, BASE BASEMAC)
+ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES, LB1 LB0, BASE BASEMAC)
+ZMK_COMBO(comboGrave, &kp GRAVE, LB2 LB1, BASE BASEMAC)
 
 ZMK_COMBO(comboComma, &kp COMMA,  RB0 RB1, BASE BASEMAC)
 ZMK_COMBO(comboDot,   &kp DOT,    RB1 RB2, BASE BASEMAC)
@@ -327,17 +328,17 @@ ZMK_LAYER(BASE,
 )
 
 ZMK_LAYER(LOWER,
-	&kp ESC       &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &kp SQT   &kp HOME  &kp GRAVE &kp END   &tog BASEMAC
-	&kp LC(Z)     &kp LGUI      &kp LCTRL   &kp LSHIFT    &caps_word                      &kp DQT   &kp LEFT  &kp UP    &kp RIGHT &kp LC(SLASH)
-	              &kp LC(LS(Z)) &copy_cut   &kp LS(INS)                                             &kp PG_UP &kp DOWN  &kp PG_DN
+	&caps_word     &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &kp SQT   &kp HOME  &kp GRAVE &kp END   &tog BASEMAC
+	&kp ESC        &kp LGUI      &kp LCTRL   &kp LSHIFT    &kp DEL                         &kp DQT   &kp LEFT  &kp UP    &kp RIGHT &kp LC(SLASH)
+	               &kp LC(Z)     &copy_cut   &kp LS(INS)                                             &kp PG_UP &kp DOWN  &kp PG_DN
 				                                                &kp DEL   ___          &lt RAISE MINUS    ___
 )
 
 ZMK_LAYER(RAISE,
-  &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp SEMI
-  &kp SQT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp COLON   &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
-            &kp TILDE &kp MINUS &kp DOT                                                           &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-                                            &kp BACKSLASH &lt LOWER UNDERSCORE        ___      &kp EQUAL
+  &kp EXCL       &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp SEMI
+  &kp BACKSLASH  &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp COLON   &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
+                 &kp TILDE &kp MINUS &kp DOT                                                           &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+                                            XXX  &lt LOWER UNDERSCORE        ___      &kp EQUAL
 )
 
 // -------------------------------------------------------------------
