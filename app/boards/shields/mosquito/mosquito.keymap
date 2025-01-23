@@ -247,7 +247,7 @@ ZMK_LAYER(base,
 )
 
 ZMK_LAYER(lower,
-            &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
+            &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH                                     XXX              &kp HOME      XXX           &kp END       XXX
             XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX
             &caps_word    &kp LC(Z)     &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                                                             ___           ___                                           &lt RAISE MINUS         ___
@@ -323,10 +323,10 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(bluetooth,
-                &sys_reset    &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &bootloader                                     &bootloader   XXX           XXX           XXX           &sys_reset
-                XXX           &bt BT_SEL 4  &bt BT_SEL 5  XXX           XXX                                             XXX           XXX           XXX           XXX           XXX
-                &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  XXX                                             XXX           XXX           XXX           XXX           XXX
-                                                            XXX         XXX                                             XXX         XXX
+                &bootloader   XXX   XXX   XXX   XXX                                    &out OUT_BLE   &out OUT_USB  XXX           XXX           XXX
+                &sys_reset    XXX   XXX   XXX   XXX                                    &bt BT_CLR     &bt BT_SEL 4  &bt BT_SEL 5  XXX           XXX
+                XXX           XXX  XXX  XXX  XXX                                       XXX            &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  XXX
+                                                            XXX         XXX            XXX         XXX
 )
 
 ZMK_LAYER(lang,
