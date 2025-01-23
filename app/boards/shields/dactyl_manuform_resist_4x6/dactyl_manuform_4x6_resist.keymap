@@ -208,6 +208,20 @@ ZMK_BEHAVIOR(alt_morph, mod_morph,
 )
 // ----------------------------
 // ----------------------------
+ZMK_BEHAVIOR(alt_sqt, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    // quick-tap-ms = <175>;
+    bindings = <&kp>, <&alt_morph_sqt>;
+)
+
+ZMK_BEHAVIOR(alt_morph_sqt, mod_morph,
+    bindings = <&kp SQT>, <&kp COMMA>;
+    // bindings = <&kp DOT>, <&dot_alt>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+// ----------------------------
+// ----------------------------
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
     bindings = <&kp LC(INS)>, <&kp LC(X)>;
@@ -315,23 +329,23 @@ ZMK_LAYER(base,
  &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A             &kp RETURN
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC       &lt LANG RET   &lt RAISE SPC &alt_dot RALT 0
+                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC       &lt LANG RET   &lt RAISE SPC &alt_sqt RALT 0
 )
 
 ZMK_LAYER(lower,
-                &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
- &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX            XXX
-                &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
+                &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                   XXX              &kp HOME      XXX           &kp END       XXX
+ &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                       XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX            XXX
+                &kp LC(Z)     &kp LC(LS(Z)) &copy_cut       &kp LS(INS)   &kp DEL                                        XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
 )
 
 ZMK_LAYER(raise,
-           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 XXX           &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
+           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                           &kp CARET     &kp LPAR      &kp RPAR      &kp PIPE      &kp MINUS
+ XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                             &kp ASTERISK  &kp LBRC      &kp RBRC      &kp AMPS      &kp PLUS      XXX
+           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                   XXX           &kp LBKT      &kp RBKT      &kp EQUAL     XXX
                          ___           ___                                                                                                         ___           ___
-                                                    ___    &lt LOWER UNDERSCORE     ___                     ___         ___         ___
+                                                    ___    &lt LOWER UNDERSCORE     ___                     ___         ___         &kp EQUAL
 )
 
 // -------------------------------------------------------------------
@@ -347,7 +361,7 @@ ZMK_LAYER(basemac,
  &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RETURN
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWERMAC BSPC  &lt NUMBERS ESC       &lt LANG RET   &lt RAISEMAC SPC &alt_dot RALT 0
+                                                         &mt LALT TAB  &lt LOWERMAC BSPC  &lt NUMBERS ESC       &lt LANG RET   &lt RAISEMAC SPC &alt_sqt RALT 0
 )
 
 
@@ -360,9 +374,9 @@ ZMK_LAYER(lowermac,
 )
 
 ZMK_LAYER(raisemac,
-           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &dot_spc      &kp ASTERISK  &kp LBRC      &kp RBRC      &kp PLUS      XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp XXX       &kp PIPE      &kp LBKT      &kp RBKT      &kp EQUAL
+           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp LPAR      &kp RPAR      &kp PIPE      &kp MINUS
+ XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp LBRC      &kp RBRC      &kp AMPS      &kp PLUS      XXX
+           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 XXX           &kp LBKT      &kp RBKT      &kp EQUAL     XXX
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWERMAC UNDERSCORE     ___                     ___         ___         ___
 )

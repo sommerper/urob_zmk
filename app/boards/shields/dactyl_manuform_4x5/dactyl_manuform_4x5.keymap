@@ -141,6 +141,21 @@ ZMK_BEHAVIOR(alt_morph, mod_morph,
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 // ----------------------------
+
+// ----------------------------
+ZMK_BEHAVIOR(alt_sqt, hold_tap,
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    bindings = <&kp>, <&alt_morph_sqt>;
+    hold-while-undecided;
+)
+
+ZMK_BEHAVIOR(alt_morph_sqt, mod_morph,
+    bindings = <&kp SQT>, <&kp COMMA>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+// ----------------------------
+
 // ----------------------------
 ZMK_BEHAVIOR(copy_cut, tap_dance,
     tapping-term-ms = <200>;
@@ -186,8 +201,8 @@ ZMK_BEHAVIOR(sch_macro, macro,
 ZMK_LAYER(base,
   &kp R         &kp C         &kp L           &kp D         &kp K                 &kp J         &kp F         &kp O         &kp U         &kp SEMI
   &kp R         &hml LGUI S   &hml LCTRL T    &hml LSHIFT H &kp G                 &kp M         &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
-  &kp Q         &kp W         &kp V           &lt NUMPAD B  &sqt_dqt              &kp COLON     &kp P         &kp X         &kp Y         &kp Z
-                              &mt LALT TAB    &lt LOWER BSPC  &lt NUMBERS ESC     &lt LANG RET  &lt_spc RAISE 0  &alt_dot RALT 0
+  &kp Q         &kp W         &kp V           &lt NUMPAD B  &kp SQT               &kp COLON     &kp P         &kp X         &kp Y         &kp Z
+                              &mt LALT TAB    &lt LOWER BSPC  &lt NUMBERS ESC     &lt LANG RET  &lt_spc RAISE 0  &alt_sqt RALT 0
 )
 
 ZMK_LAYER(lower,
