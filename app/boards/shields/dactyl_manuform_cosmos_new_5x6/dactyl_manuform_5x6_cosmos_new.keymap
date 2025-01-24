@@ -303,9 +303,9 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
            &kp F1        &kp F2         &kp F3        &kp F4        &kp F5                                             &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      XXX
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX         XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 XXX           XXX           &kp LBKT      &kp RBKT      &kp EQUAL     
+           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      XXX
+ XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp PIPE      &kp LBRC      &kp RBRC      &kp CARET    XXX
+           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWER UNDERSCORE     ___    ___             ___    ___         ___         &kp EQUAL
 )
@@ -341,9 +341,9 @@ ZMK_LAYER(lowermac,
 
 ZMK_LAYER(raisemac,
           &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                            &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-          XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp MINUS
- XXX      &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      &kp PLUS      XXX
-          &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 XXX           XXX           &kp LBKT      &kp RBKT      &kp EQUAL     
+          XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      XXX
+ XXX      &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp PIPE      &kp LBRC      &kp RBRC      &kp CARET    XXX
+          &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL     
                          ___           ___                                                                                                         ___           ___
                                                     ___    &lt LOWERMAC UNDERSCORE     ___   ___              ___    ___         ___         ___
 )
