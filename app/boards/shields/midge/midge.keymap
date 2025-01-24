@@ -344,8 +344,8 @@ ZMK_LAYER(LOWER,
 )
 
 ZMK_LAYER(RAISE,
-  &kp EXCL       &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET     &kp LPAR      &kp RPAR      &kp PIPE      &kp SEMI
-  &kp BACKSLASH  &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp ASTERISK  &kp LBRC      &kp RBRC      &kp AMPS      &kp ENTER
+  &kp EXCL       &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET     &kp PIPE      &kp LPAR      &kp RPAR      &kp SEMI
+  &kp BACKSLASH  &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp ASTERISK  &kp AMPS      &kp LBRC      &kp RBRC      &kp ENTER
                  &kp TILDE &kp MINUS &kp DOT                                                             &kp LBKT      &kp RBKT      &kp EQUAL
                                         &kp COMMA  &lt LOWER UNDERSCORE        ___      &kp EQUAL
 )
@@ -374,9 +374,9 @@ ZMK_LAYER(LOWERMAC,
 )
 
 ZMK_LAYER(RAISEMAC,
-  &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET   &kp AMPERSAND   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS   &kp M
-  &kp SQT   &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp COLON   &kp ASTERISK    &kp LEFT_BRACE        &kp RIGHT_BRACE         &kp ENTER
-            &kp TILDE &kp MINUS &kp DOT                                                           &kp PIPE        &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+  &kp EXCL      &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET     &kp PIPE      &kp LPAR      &kp RPAR      &kp SEMI
+  &kp BACKSLASH &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp ASTERISK  &kp AMPS      &kp LBRC      &kp RBRC      &kp ENTER
+                &kp TILDE &kp MINUS &kp DOT                                                             &kp LBKT      &kp RBKT      &kp EQUAL
                                             &kp BACKSLASH &lt LOWERMAC UNDERSCORE        ___      &kp EQUAL
 )
 
