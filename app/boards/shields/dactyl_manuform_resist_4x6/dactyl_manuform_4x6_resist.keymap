@@ -335,7 +335,7 @@ ZMK_LAYER(base,
 ZMK_LAYER(lower,
                 &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                   XXX              &kp HOME      XXX           &kp END       XXX
  &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                       XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX            XXX
-                &caps_word    &kp LC(Z)     &copy_cut       &kp LS(INS)   &kp DEL                                        XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
+                &kp LC(Z)     XXX           &copy_cut       &kp LS(INS)   &kp DEL                                        XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISE MINUS         ___
 )
@@ -368,7 +368,7 @@ ZMK_LAYER(basemac,
 ZMK_LAYER(lowermac,
                 &tog BASE     &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
  &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN       XXX
-                &caps_word    &kp LG(Z)     &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
+                &kp LG(Z)     XXX           &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___                        ___        &lt RAISEMAC MINUS         ___
 )
