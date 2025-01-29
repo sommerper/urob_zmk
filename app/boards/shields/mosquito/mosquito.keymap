@@ -260,8 +260,8 @@ ZMK_LAYER(lower,
 
 ZMK_LAYER(raise,
             &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
-            &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX
-            XXX           &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
+            &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      &kp EQUAL
+            XXX           &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      XXX
                                                     &kp COMMA    &lt LOWER UNDERSCORE                                         ___         &kp EQUAL
 )
 
@@ -274,24 +274,24 @@ ZMK_LAYER(raise,
 // -------------------------------------------------------------------
 
 ZMK_LAYER(basemac,
-            &kp M         &kp C          &kp L           &kp D         &kp K                                            &kp J            &kp F         &kp O         &kp U         &kp SEMI
-            &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                            &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
-            &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                          &kp COLON        &kp P         &kp X         &kp Y         &kp Z
+            &kp Q         &kp C          &kp L           &kp D         &kp K                                             &kp J            &kp F         &kp O         &kp U         &kp Z
+            &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A
+            &lt GERMAN ESC  &kp W        &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp ENTER
                                                          &mt LALT TAB  &lt LOWERMAC BSPC                                             &lt RAISEMAC SPC  &alt_sqt RALT 0
 )
 
 
 ZMK_LAYER(lowermac,
-            &tog BASE     &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
-            &kp LG(Z)     &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN
-            &caps_word    XXX           &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
+            XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH                                     XXX              &kp HOME      XXX           &kp END       XXX
+            &kp LC(Z)     &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp LC(SLASH)
+            &caps_word    XXX           &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     XXX
                                                             ___           ___                                           &lt RAISEMAC MINUS         ___
 )
 
 ZMK_LAYER(raisemac,
-            &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
+            &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
             &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX
-            XXX           &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
+            XXX           &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
                                                     ___    &lt LOWER UNDERSCORE                                         ___         &kp EQUAL
 )
 
