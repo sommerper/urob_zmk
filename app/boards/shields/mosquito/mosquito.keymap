@@ -284,7 +284,7 @@ ZMK_LAYER(basemac,
 ZMK_LAYER(lowermac,
             XXX           &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH                                     XXX              &kp HOME      XXX           &kp END       XXX
             &kp LC(Z)     &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp LC(SLASH)
-            &caps_word    XXX           &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     XXX
+            &caps_word    &copy_cut_mac &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     XXX
                                                             ___           ___                                           &lt RAISEMAC MINUS         ___
 )
 
