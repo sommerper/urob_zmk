@@ -126,6 +126,7 @@ MASK_MODS(masked_end,  (MOD_LCTL), &kp END)
   };
 };
 
+
 // modify &sk to prevent double capital letters
 / {
   behaviors {
@@ -261,7 +262,7 @@ ZMK_LAYER(lower,
 ZMK_LAYER(raise,
             &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
             &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      &kp EQUAL
-            XXX           &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      XXX
+            &kp GRAVE     &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      XXX
                                                     &kp COMMA    &lt LOWER UNDERSCORE                                         ___         &kp EQUAL
 )
 
