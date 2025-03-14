@@ -329,6 +329,15 @@ ZMK_LAYER(basemac,
 )
 
 
+// ZMK_LAYER(lowermac,
+//                 &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                      &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+//                 &tog BASE     &kp K_VOL_DN   &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
+//  &caps_word     XXX           &kp LGUI       &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN       XXX
+//                 &kp LG(Z)     XXX            &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
+//                               ___           ___                                                                                                            ___           ___
+//                                                             ___           ___         ___    ___                ___    ___        &lt RAISEMAC MINUS         ___
+// )
+
 ZMK_LAYER(lowermac,
                 &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                      &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
                 &tog BASE     &kp K_VOL_DN   &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
@@ -336,7 +345,6 @@ ZMK_LAYER(lowermac,
                 &kp LG(Z)     XXX            &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
                               ___           ___                                                                                                            ___           ___
                                                             ___           ___         ___    ___                ___    ___        &lt RAISEMAC MINUS         ___
-
 )
 
 ZMK_LAYER(raisemac,

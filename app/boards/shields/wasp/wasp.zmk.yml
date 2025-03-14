@@ -1,0 +1,11 @@
+file_format: "1"
+id: wasp
+name: Wasp
+type: shield
+url: https://github.com/tapioki/cephalopoda/tree/main/Architeuthis%20dux
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - wasp_left
+  - wasp_right
