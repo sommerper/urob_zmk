@@ -1,0 +1,8 @@
+file_format: "1"
+id: crisis
+name: Crisis
+type: shield
+url: https://github.com/sommerper/Crisis
+requires: [pro_micro]
+features:
+  - keys
