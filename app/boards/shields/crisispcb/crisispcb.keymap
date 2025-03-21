@@ -272,10 +272,10 @@ ZMK_LAYER(numbers,
 )
 
 ZMK_LAYER(bluetooth,
-  &sys_reset    &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &bootloader                                     &bootloader   XXX           XXX           XXX           &sys_reset
-  XXX           &bt BT_SEL 4  &bt BT_SEL 5  XXX           XXX                                             XXX           XXX           XXX           XXX           XXX
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  XXX                                             XXX           XXX           XXX           XXX           XXX
-                    XXX           XXX                                                                                                 XXX           XXX
+  XXX           XXX           XXX           XXX           XXX                                             &sys_reset    XXX           &out OUT_BLE  &out OUT_USB  &bootloader
+  XXX           XXX           XXX           XXX           XXX                                             XXX           &bt BT_SEL 4  &bt BT_SEL 5  XXX           XXX
+  XXX           XXX           XXX           XXX           XXX                                             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  XXX
+                    XXX           XXX                                                                                                 &bt BT_CLR    XXX
                                                   XXX         XXX         XXX                   XXX         XXX         XXX
 )
 
