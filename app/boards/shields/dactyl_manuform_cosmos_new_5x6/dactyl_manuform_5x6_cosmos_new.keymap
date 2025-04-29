@@ -34,11 +34,11 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <LOWER RAISE>;
-            then-layer = <EXTRAS>;
+            then-layer = <NUMBERS>;
         };
         tri_layer_mac {
             if-layers = <LOWERMAC RAISEMAC>;
-            then-layer = <EXTRAS>;
+            then-layer = <NUMBERS>;
         };
     };
 };
@@ -289,11 +289,11 @@ ZMK_LAYER(base,
  &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                             &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A             &kp RETURN
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                           &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                  &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC   &kp GRAVE    &kp GRAVE &lt LANG RET   &lt RAISE SPC &alt_sqt RALT 0
+                                                  &mt LALT TAB  &lt LOWER BSPC  &lt EXTRAS  ESC   &kp GRAVE    &kp GRAVE &lt LANG RET   &lt RAISE SPC &alt_sqt RALT 0
 )
 
 ZMK_LAYER(lower,
-                &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                     &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
+                &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                     &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
                 &tog BASEMAC  &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &kp LC(BSPC)                                      XXX              &kp HOME      XXX           &kp END       XXX
  &caps_word     XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX            XXX
                 &kp LC(Z)     XXX           &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LC(SLASH)
@@ -302,12 +302,12 @@ ZMK_LAYER(lower,
 )
 
 ZMK_LAYER(raise,
-           &kp F1        &kp F2         &kp F3        &kp F4        &kp F5                                             &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
-           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      XXX
- XXX       &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp PIPE      &kp LBRC      &kp RBRC      &kp CARET    XXX
-           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
-                         ___           ___                                                                                                         ___           ___
-                                                    ___    &lt LOWER UNDERSCORE     ___    ___             ___    ___         ___         &kp EQUAL
+             &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                              &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+             XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      XXX
+ &tog QUERTY &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp PIPE      &kp LBRC      &kp RBRC      &kp CARET    XXX
+             &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
+                           ___           ___                                                                                                         ___           ___
+                                                      ___    &lt LOWER UNDERSCORE     ___    ___             ___    ___         ___         &kp EQUAL
 )
 
 // -------------------------------------------------------------------
@@ -324,19 +324,10 @@ ZMK_LAYER(basemac,
  &kp ESC    &kp R         &hml LGUI S    &hml LCTRL T    &hml LSHIFT H &kp G                                                        &kp M            &hmr RSHIFT N &hmr RCTRL E  &hmr RGUI I   &kp A     &kp RETURN
             &kp Q         &kp W          &kp V           &lt NUMPAD B  &kp SQT                                                      &kp COLON        &kp P         &kp X         &kp Y         &kp Z
                           &kp GRAVE      &kp DQT                                                                                                        &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWERMAC BSPC  &lt NUMBERS ESC   &kp GRAVE    &kp GRAVE  &lt LANG RET   &lt RAISEMAC SPC &alt_sqt RALT 0
+                                                         &mt LALT TAB  &lt LOWERMAC BSPC  &lt EXTRAS ESC    &kp GRAVE    &kp GRAVE  &lt LANG RET   &lt RAISEMAC SPC &alt_sqt RALT 0
 
 )
 
-
-// ZMK_LAYER(lowermac,
-//                 &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                      &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
-//                 &tog BASE     &kp K_VOL_DN   &kp K_MUTE      &kp K_VOL_UP  &kp LG(BSPC)                                      &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
-//  &caps_word     XXX           &kp LGUI       &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     &kp RETURN       XXX
-//                 &kp LG(Z)     XXX            &copy_cut_mac   &kp LG(V)     &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
-//                               ___           ___                                                                                                            ___           ___
-//                                                             ___           ___         ___    ___                ___    ___        &lt RAISEMAC MINUS         ___
-// )
 
 ZMK_LAYER(lowermac,
                 &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3    &kp NUMBER_4  &kp NUMBER_5                                      &kp NUMBER_6     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0
@@ -348,7 +339,7 @@ ZMK_LAYER(lowermac,
 )
 
 ZMK_LAYER(raisemac,
-          &kp F1         &kp F2         &kp F3        &kp F4        &kp F5                                            &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
+          &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                              &kp F6        &kp F7        &kp F8        &kp F9        &kp F10
           XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         XXX           &kp AMPS      &kp LPAR      &kp RPAR      XXX
  XXX      &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           XXX           &kp PIPE      &kp LBRC      &kp RBRC      &kp CARET    XXX
           &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       XXX                                                 &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL     
@@ -362,15 +353,15 @@ ZMK_LAYER(raisemac,
 
 ZMK_LAYER(querty,
             XXX           XXX            XXX             XXX           XXX                                                            XXX              XXX           XXX           XXX           XXX
-            &kp Q         &kp R          &kp E           &kp R         &kp T                                                          &kp Y            &kp U         &kp I         &kp O         &kp P
+            &kp Q         &kp W          &kp E           &kp R         &kp T                                                          &kp Y            &kp U         &kp I         &kp O         &kp P
  &kp LGUI   &kp A         &kp S          &kp D           &kp F         &kp G                                                          &kp H            &kp J         &kp K         &kp K         &kp L     &kp RETURN
             &kp Z         &kp X          &kp C           &kp V         &kp B                                                          &kp N            &kp N         &kp M         &kp COMMA     &kp DOT
                           &kp LCTRL      &kp LSHIFT                                                                                                     &kp COMMA     &kp DOT
-                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC  &kp GRAVE         &kp GRAVE   &lt LANG RET  &lt RAISE SPC &alt_dot RALT 0
+                                                         &mt LALT TAB  &lt LOWER BSPC  &lt NUMBERS ESC  &kp GRAVE         &kp GRAVE   &lt LANG RET  &lt RAISE SPC &kp RGUI
 )
 
 ZMK_LAYER(extras,
-                XXX           XXX            XXX             XXX           XXX                                               XXX              XXX           XXX           XXX           XXX
+                XXX           XXX           XXX           XXX           XXX                                             XXX           XXX           XXX           XXX           XXX
                 XXX           XXX           XXX           XXX           XXX                                             &kp F13       &kp F7        &kp F8        &kp F9        &kp F10
   &mo BLUETOOTH XXX           XXX           XXX           XXX           XXX                                             &kp F14       &kp F4        &kp F5        &kp F6        &kp F11       XXX
                 XXX           XXX           XXX           XXX           XXX                                             &kp F15       &kp F1        &kp F2        &kp F3        &kp F12
@@ -379,7 +370,7 @@ ZMK_LAYER(extras,
 )
 
 ZMK_LAYER(numpad,
-                XXX           XXX            XXX             XXX           XXX                                               XXX              XXX           XXX           XXX           XXX
+                XXX           XXX           XXX           XXX           XXX                                             XXX             XXX         XXX         XXX         XXX
                 XXX           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  XXX                                             &kp KP_DIVIDE   &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp KP_MINUS
   XXX           XXX           &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  XXX                                             &kp KP_MULTIPLY &kp KP_N4   &kp KP_N5   &kp KP_N6   &kp KP_PLUS       XXX
                 &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  XXX                                             &kp COLON       &kp KP_N1   &kp KP_N2   &kp KP_N3   &kp KP_EQUAL
@@ -388,16 +379,16 @@ ZMK_LAYER(numpad,
 )
 
 ZMK_LAYER(numbers,
-                XXX           XXX            XXX             XXX           XXX                                               XXX              XXX           XXX           XXX           XXX
-                &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                          &kp F6          &kp F7        &kp KP_N8   &kp F9        &kp F10
-  XXX           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp KP_N8   &kp NUMBER_9  &kp NUMBER_0    XXX
-                &kp F11       &kp F12       &kp F13       &kp F14       &kp F15                                         &kp F16         &kp F17       &kp KP_N8   &kp F19       &kp F20
+                XXX           XXX           XXX           XXX           XXX                                             XXX             XXX           XXX          XXX           XXX
+                &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                          &kp F6          &kp F7        &kp F8       &kp F9        &kp F10
+  XXX           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5                                    &kp NUMBER_6    &kp NUMBER_7  &kp NUMBER_8 &kp NUMBER_9  &kp NUMBER_0    XXX
+                &kp F11       &kp F12       &kp F13       &kp F14       &kp F15                                         &kp F16         &kp F17       &kp F18      &kp F19       &kp F20
                               ___           ___                                                                                                       ___         ___
                                                             ___         ___         ___   ___                ___   ___         ___           ___
 )
 
 ZMK_LAYER(bluetooth,
-                XXX           XXX            XXX             XXX           XXX                                               XXX              XXX           XXX           XXX           XXX
+                XXX           XXX           XXX           XXX           XXX                                             XXX           XXX           XXX           XXX           XXX
                 &sys_reset    &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &bootloader                                     &bootloader   XXX           XXX           XXX           &sys_reset
   XXX           XXX           &bt BT_SEL 4  &bt BT_SEL 5  XXX           XXX                                             XXX           XXX           XXX           XXX           XXX           XXX
                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  XXX                                             XXX           XXX           XXX           XXX           XXX
