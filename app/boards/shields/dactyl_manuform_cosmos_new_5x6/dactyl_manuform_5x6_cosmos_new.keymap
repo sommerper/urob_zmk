@@ -51,9 +51,26 @@
 #define COMBO_TERM 18
 
 
+// --------------------------------------------
+// ------------------ COMBOS ------------------
+// --------------------------------------------
+ZMK_COMBO(comboLPar, &kp LPAR, LT3 LT2, BASE)
+ZMK_COMBO(comboRPar, &kp RPAR, RT3 RT2, BASE)
 
+ZMK_COMBO(comboLBrc, &kp LBRC, LM3 LM2, BASE)
+ZMK_COMBO(comboRBrc, &kp RBRC, RM3 RM2, BASE)
 
-ZMK_COMBO(comboDoubleQuote1, &kp SQT, RM1 RM2, BASE)
+ZMK_COMBO(comboLBkt, &kp LBKT, LB3 LB2, BASE)
+ZMK_COMBO(comboRBkt, &kp RBKT, RB3 RB2, BASE)
+
+ZMK_COMBO(comboMinus, &kp MINUS, RT1 RT2, BASE)
+ZMK_COMBO(comboPlus, &kp PLUS, RM1 RM2, BASE)
+ZMK_COMBO(comboEqual, &kp EQUAL, RB1 RB2, BASE)
+
+ZMK_COMBO(comboExcl, &kp EXCL, LT2 LT1, BASE)
+ZMK_COMBO(comboAt, &kp AT, LM2 LM1, BASE)
+// -----------------COMBOS--------------------
+
 
 // #define HRC_TAB    &hml         LS(LALT) TAB
 // ZMK_COMBO(tab,   HRC_TAB,       LT3 LT1,     BASE, COMBO_TERM)
