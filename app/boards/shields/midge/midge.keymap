@@ -287,7 +287,7 @@ ZMK_BEHAVIOR(alt_morph, mod_morph,
 )
 // ----------------------------
 
-// ----------------------------
+// -----------------------------
 ZMK_BEHAVIOR(alt_sqt, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
@@ -329,6 +329,7 @@ ZMK_BEHAVIOR(dot_comma, tap_dance,
 // -------------------------------------------------------------------
 // Linux start
 // -------------------------------------------------------------------
+
 ZMK_LAYER(BASE,
   &lt DANISH Q   &kp C         &kp L         &kp D           &kp K                                             &kp J           &kp F           &kp O         &kp U         &kp Z
   &lt GERMAN R   &hml LGUI S   &hml LCTRL T  &hml LSHIFT H   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX A
@@ -336,17 +337,24 @@ ZMK_LAYER(BASE,
  		                                                  &mt LALT TAB  &lt LOWER BSPC    &lt_spc RAISE 0  &alt_sqt RALT 0
 )
 
+// ZMK_LAYER(BASE,
+//   &lt DANISH R   &kp C         &kp L         &kp D           &kp K                                             &kp J           &kp F           &kp O         &kp U         &kp A
+//   &lt GERMAN Q   &hml LGUI S   &hml LCTRL T  &hml LSHIFT H   &kp G                                             &kp M           &hmr RSHIFT N   &hmr RCTRL E  &hmr RGUI I   &lt ENTERFIX Z
+// 		 		         &kp W         &kp V         &lt NUMPAD B                                                                      &kp P           &kp X         &kp Y
+//  		                                                  &mt LALT TAB  &lt LOWER BSPC    &lt_spc RAISE 0  &alt_sqt RALT 0
+// )
+
 ZMK_LAYER(LOWER,
-  &caps_word     &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &kp DQT   &kp HOME  &kp GRAVE &kp END   &tog BASEMAC
-	&kp ESC        &kp LGUI      &kp LCTRL   &kp LSHIFT    &kp DEL                         &kp SQT   &kp LEFT  &kp UP    &kp RIGHT &kp LC(SLASH)
+  &kp ESC     &kp K_VOL_DN  &kp K_MUTE  &kp K_VOL_UP  &mo BLUETOOTH                   &kp DQT   &kp HOME  &kp GRAVE &kp END   &tog BASEMAC
+	&caps_word  &kp LGUI      &kp LCTRL   &kp LSHIFT    &kp DEL                         &kp SQT   &kp LEFT  &kp UP    &kp RIGHT &kp LC(SLASH)
 	               &kp LC(Z)     &copy_cut   &kp LS(INS)                                             &kp PG_UP &kp DOWN  &kp PG_DN
 				                                                &kp DEL   ___          &lt RAISE MINUS    &kp DOT
 )
 
 ZMK_LAYER(RAISE,
-  &kp EXCL       &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
-  &kp BACKSLASH  &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      &kp ENTER
-                 &kp TILDE &kp MINUS &kp DOT                                                             &kp LBKT      &kp RBKT      &kp EQUAL
+  &kp BACKSLASH  &kp AT    &kp HASH  &kp DOLLAR  &kp PERCENT                               &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
+  &kp EXCL       &kp LT    &kp SLASH &kp GT      &kp QMARK                                 &kp EQUAL     &kp PIPE      &kp LBRC      &kp RBRC      &kp ENTER
+                 &kp TILDE &kp MINUS &kp DOT                                                             &kp ASTERISK  &kp LBKT      &kp RBKT
                                         &kp COMMA  &lt LOWER UNDERSCORE        ___      &kp EQUAL
 )
 

@@ -44,11 +44,11 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <LOWER RAISE>;
-            then-layer = <EXTRAS>;
+            then-layer = <NUMBERS>;
         };
         tri_layer_mac {
             if-layers = <LOWERMAC RAISEMAC>;
-            then-layer = <EXTRAS>;
+            then-layer = <NUMBERS>;
         };
     };
 };
@@ -68,26 +68,35 @@ MAKE_HRM(hml, &kp, &kp, THUMBS_L THUMBS_R KEYS_R)
 MAKE_HRM(hmr, &kp, &kp, THUMBS_L THUMBS_R KEYS_L)
 
 
+// --------------------------------------------
+// ------------------ COMBOS ------------------
+// --------------------------------------------
+#undef COMBO_TERM
+#define COMBO_TERM 25
+// ZMK_COMBO(comboLPar, &kp LPAR, LT3 LT2, BASE BASEMAC)
+// ZMK_COMBO(comboRPar, &kp RPAR, RT2 RT3, BASE BASEMAC)
 
+// ZMK_COMBO(comboLBrc, &kp LBRC, LM3 LM2, BASE BASEMAC)
+// ZMK_COMBO(comboRBrc, &kp RBRC, RM2 RM3, BASE BASEMAC)
 
-ZMK_COMBO(enter1,   &kp ENTER,  RH0 RM4, BASE BASEMAC)
-ZMK_COMBO(enter2,   &kp ENTER,  RH0 RH1, BASE BASEMAC)
+// ZMK_COMBO(comboLBkt, &kp LBKT, LB3 LB2, BASE BASEMAC)
+// ZMK_COMBO(comboRBkt, &kp RBKT, RB2 RB3, BASE BASEMAC)
 
-ZMK_COMBO(comboSingleQuote, &kp SINGLE_QUOTE,  LB3 LB2, BASE BASEMAC)
-ZMK_COMBO(comboDoubleQuote, &kp DOUBLE_QUOTES,  LB2 LB1, BASE BASEMAC)
-// ZMK_COMBO(tilde,   &kp TILDE,  RB2 RB3, BASE BASEMAC)
+ZMK_COMBO(comboComma, &kp COMMA, RB1 RB2, BASE BASEMAC)
+ZMK_COMBO(comboDot, &kp DOT, RB2 RB3, BASE BASEMAC)
 
-// ZMK_COMBO(undo,       &kp LC(Z),  LM4 LB3, BASE BASEMAC)
-// ZMK_COMBO(copy,       &kp LC(C),  LB3 LB2, BASE BASEMAC)
-// ZMK_COMBO(paste,      &kp LC(V),  LB2 LB1, BASE BASEMAC)
+// ZMK_COMBO(comboMinus, &kp MINUS, RT1 RT2, BASE BASEMAC)
+// ZMK_COMBO(comboPlus, &kp PLUS, RM1 RM2, BASE BASEMAC)
+// ZMK_COMBO(comboEqual, &kp EQUAL, RB1 RB2, BASE BASEMAC)
 
-ZMK_COMBO(comboComma, &kp COMMA,  RB1 RB2, BASE BASEMAC)
-ZMK_COMBO(comboDot,   &kp DOT,    RB2 RB3, BASE BASEMAC)
+// ZMK_COMBO(comboUnderscore, &kp UNDERSCORE, LT2 LT1, BASE BASEMAC)
+// ZMK_COMBO(comboExcl, &kp EXCL, LB2 LB1, BASE BASEMAC)
+// ZMK_COMBO(comboAt, &kp AT, LM2 LM1, BASE BASEMAC)
 
+// ZMK_COMBO(comboTab, &kp TAB, RB0 RB1, BASE BASEMAC)
 
-// ZMK_COMBO(fkeys,   &mo FUNC,  LH0 RH0, 0)
-// ZMK_COMBO(about,    "about",  LM4 LT0, 0)
-// ZMK_COMBO(and,      "and",  LM4 RM1, 0)
+// ZMK_COMBO(comboNumpad, &lt NUMPAD ESC, LB0 LB1, BASE BASEMAC)
+
 
 &lt {
   tapping-term-ms = <280>;
@@ -200,7 +209,7 @@ ZMK_BEHAVIOR(alt_sqt, hold_tap,
 )
 
 ZMK_BEHAVIOR(alt_morph_sqt, mod_morph,
-    bindings = <&kp SQT>, <&kp COMMA>;
+    bindings = <&kp DOT>, <&kp COMMA>;
     // bindings = <&kp DOT>, <&dot_alt>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
@@ -262,7 +271,7 @@ ZMK_LAYER(lower,
 ZMK_LAYER(raise,
             &kp BACKSLASH &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
             &kp GRAVE     &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX
-            &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
+            &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       &kp GRAVE                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
                                                     &kp COMMA    &lt LOWER UNDERSCORE                                         ___         &kp EQUAL
 )
 
@@ -283,16 +292,16 @@ ZMK_LAYER(basemac,
 
 
 ZMK_LAYER(lowermac,
-            &caps_word    &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH                                     XXX              &kp HOME      XXX           &kp END       XXX
+            &caps_word    &kp K_VOL_DN  &kp K_MUTE      &kp K_VOL_UP  &mo BLUETOOTH                                     &kp HOME         &kp LG(LEFT)  XXX           &kp LG(RIGHT) &kp END
             XXX           &kp LGUI      &kp LCTRL       &kp LSHIFT    &kp BSPC                                          XXX              &kp LEFT      &kp UP        &kp RIGHT     XXX
             &kp LG(Z)     &copy_cut_mac &copy_cut       &kp LS(INS)   &kp DEL                                           XXX              &kp PG_UP     &kp DOWN      &kp PG_DN     &kp LG(SLASH)
                                                             ___           ___                                           &lt RAISEMAC MINUS         ___
 )
 
 ZMK_LAYER(raisemac,
-            XXX           &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
-            &kp BACKSLASH &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX
-            &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       &kp COMMA                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
+            &kp BACKSLASH &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                                         &kp CARET     &kp AMPS      &kp LPAR      &kp RPAR      &kp SEMI
+            &kp GRAVE     &kp LT        &kp SLASH     &kp GT        &kp QMARK                                           &kp ASTERISK  &kp PIPE      &kp LBRC      &kp RBRC      XXX
+            &kp EXCL      &kp TILDE     &kp MINUS     &kp DOT       &kp GRAVE                                           &kp SEMI      &kp ASTERISK  &kp LBKT      &kp RBKT      &kp EQUAL
                                                     ___    &lt LOWER UNDERSCORE                                         ___         &kp EQUAL
 )
 
